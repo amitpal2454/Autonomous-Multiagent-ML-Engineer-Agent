@@ -1,0 +1,113 @@
+# ==============================
+# ENVIRONMENT & SECRETS
+# ==============================
+.env
+.env.*
+*.env
+secrets.json
+config.local.json
+
+# Example file (keep this in git)
+!.env.example
+
+
+# ==============================
+# PYTHON
+# ==============================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+eggs/
+*.egg-info/
+pip-wheel-metadata/
+
+# Jupyter
+.ipynb_checkpoints/
+
+
+# ==============================
+# VIRTUAL ENVIRONMENTS
+# ==============================
+.venv/
+venv/
+ENV/
+env/
+
+
+# ==============================
+# IDE / EDITOR
+# ==============================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+
+# ==============================
+# LOGS & OUTPUTS
+# ==============================
+logs/
+output/
+outputs/
+tmp/
+temp/
+*.log
+
+
+# ==============================
+# ML / AI ARTIFACTS
+# ==============================
+models/
+checkpoints/
+artifacts/
+mlruns/
+wandb/
+tensorboard/
+*.ckpt
+*.pt
+*.pth
+*.onnx
+*.h5
+*.pkl
+*.joblib
+
+
+# ==============================
+# DATA FILES (usually ignored)
+# ==============================
+data/
+datasets/
+*.csv
+*.parquet
+*.feather
+*.db
+
+
+# ==============================
+# LANGCHAIN / VECTOR DB
+# ==============================
+chroma/
+faiss_index/
+*.faiss
+
+
+# ==============================
+# AZURE / GCP / CLOUD
+# ==============================
+*.pem
+*.key
+*.crt
+service-account*.json
+.azure/
+.gcp/
+
+
+# ==============================
+# OS FILES
+# ==============================
+.DS_Store
+Thumbs.db
