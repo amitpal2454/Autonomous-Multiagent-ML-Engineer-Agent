@@ -16,3 +16,7 @@ openai
 azure-identity 
 azure-storage-blob
 azure-monitor-opentelemetry
+graphviz
+langgraph-checkpoint-sqlite
+pip install pygraphviz
+python-multipart

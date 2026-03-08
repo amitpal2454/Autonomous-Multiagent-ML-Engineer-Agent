@@ -1,11 +1,15 @@
 from pydantic import BaseModel
-from typing import Optional, Dict, List
+from typing import Optional, Dict, List,Any
 
 
 class AgentRequest(BaseModel):
     user_query: str
     dataset_path: str
 
+
+class DatasetSchema(BaseModel):
+    columns: List[str]
+    rows: List[Dict[str, Any]]
 
 class MLSystemState(BaseModel):
     user_query: str

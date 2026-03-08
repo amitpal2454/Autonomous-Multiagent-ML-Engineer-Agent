@@ -1,14 +1,24 @@
+from utils.logger import logger
 from config.setting import setting
 
+
 def evaluation_agent(state):
+    logger.info("Evaluation Agent Started")
+
     metrics = state.get("model_metrics")
 
     if not metrics:
         return {}
 
-    score = metrics.get("r2_score", 0)
+    # dynamic metric
+    metric_name = list(metrics.keys())[0]
+    score = metrics[metric_name]
 
-    if score >= 0.75:
+    logger.info(f"Evaluation Score: {score}")
+
+    if score >= setting.performance_threshold:
+        logger.info("Model Approved")
         return {"deployment_status": "approved"}
     else:
-        return {"deployment_status": "rejected"}
+        logger.warning("Model Performance Below Threshold")
+        return {"deployment_status": "improve"}
